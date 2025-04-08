@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeHeType - Improve Your Typing Speed</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Login Page -->
+        <div id="loginPage" class="page active">
+            <div class="login-container">
+                <div class="login-box">
+                    <h1>HeHeType</h1>
+                    <div id="loginError" class="error-message"></div>
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" required>
+                        </div>
+                        <button type="submit">Sign In</button>
+                        <p class="toggle-form">
+                            Don't have an account? 
+                            <a href="#" id="toggleSignup">Sign Up</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Level Select Page -->
+        <div id="levelSelect" class="page">
+            <nav class="navbar">
+                <h1>HeHeType</h1>
+                <button id="logoutBtn">Logout</button>
+            </nav>
+            <div class="levels-container">
+                <h2>Choose Your Level</h2>
+                <div class="levels-grid">
+                    <div class="level-card" data-level="1">
+                        <h3>Level 1: Home Row</h3>
+                        <p>Practice with home row keys (asdfghjkl)</p>
+                        <div class="difficulty">Beginner</div>
+                    </div>
+                    <div class="level-card" data-level="2">
+                        <h3>Level 2: Extended Keys</h3>
+                        <p>Practice with additional keys (qwertyuiop)</p>
+                        <div class="difficulty">Intermediate</div>
+                    </div>
+                    <div class="level-card" data-level="3">
+                        <h3>Level 3: Full Keyboard</h3>
+                        <p>Practice with all letter keys</p>
+                        <div class="difficulty">Advanced</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Practice Page -->
+        <div id="practice" class="page">
+            <div class="practice-container">
+                <button id="backToLevels" class="back-button">← Back to Levels</button>
+                <div class="stats">
+                    <div class="stat-box">
+                        <label>WPM</label>
+                        <span id="wpm">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <label>Accuracy</label>
+                        <span id="accuracy">100%</span>
+                    </div>
+                    <div class="stat-box">
+                        <label>Mistakes</label>
+                        <span id="mistakes">0</span>
+                    </div>
+                </div>
+                <div class="typing-area">
+                    <p id="textToType" class="text-display"></p>
+                    <input type="text" id="userInput" placeholder="Start typing..." autocomplete="off">
+                </div>
+                <div id="keyboard" class="keyboard"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
